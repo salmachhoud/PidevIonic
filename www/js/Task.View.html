@@ -1,0 +1,60 @@
+<ion-header-bar class="bar-royal">
+
+  <!-- <button class="button button-icon ion-minus-circled" ng-click="data.showDelete = !data.showDelete">
+    </button> -->
+
+     <h2 class="title">List Tasks</h2>
+
+    <button class="button button-icon ion-navicon" ng-click="data.showReorder = !data.showReorder">
+    </button>
+
+</ion-header-bar>
+
+<ion-content class="hus-subheader">
+     <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" ng-model="q" id="search" placeholder="Search">
+  </label>
+</div>
+    
+    <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+  
+
+<ion-item ng-click="selectTask(Task,$index)" style="cursor:hand" class="item item-thumbnail-left item-text-wrap" ng-repeat="Task in Tasks | filter:q"> 
+    {{Task.name}}
+    <ion-delete-button class="ion-minus-circled" ng-click="delete()">
+    </ion-delete-button> 
+    
+    <ion-option-button class="button-assertive"
+           ng-click="delete()">
+    Delete
+</ion-option-button>
+    <ion-option-button class="button-balanced"
+           ng-click="edit1(Task.id)">
+    Edit
+    </ion-option-button>
+     <ion-option-button class="button-positive"
+           ng-click="detail1(Task.id)">
+    Detail
+    </ion-option-button>
+</ion-item>
+        
+</ion-list>
+    
+    </ion-content>
+    
+<div class="tabs-striped tabs-color-royal">
+    <ion-tabs class="tabs-icon-top" >
+        <ion-tab icon="ion-clipboard" title="List Tasks" href="#/list"></ion-tab>
+        <ion-tab icon="ion-plus-circled" title="Add Task" href="#/form"></ion-tab>
+        <ion-tab icon="ion-arrow-down-c" title="Upload Image" href="#/upload"></ion-tab>
+    </ion-tabs>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<ion-header-bar class="bar-royal">
+
+     <h2 class="title">Update Tasks</h2>
+
+</ion-header-bar>
+<ion-content>
+<div class="list list-inset">
+
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Start-Date</span>
+    <input type="text" ng-model="TaskById.startdate" placeholder="Start-Date">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Name</span>
+    <input type="text" ng-model="TaskById.name" placeholder="Name">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Participants-Number</span>
+    <input type="number" ng-model="TaskById.numberofparticipants" placeholder="Participants-Number">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">End-Date</span>
+    <input type="text" ng-model="TaskById.enddate" placeholder="End-Date">
+  </label>
+    
+</div>
+ <button type="button" class="button button-full button-calm" ng-click="edit()">Edit</button>
+</ion-content>
+<div class="tabs-striped tabs-color-royal">
+        <ion-tabs class="tabs-icon-top" >
+        <ion-tab icon="ion-arrow-down-c" title="Upload Image" href="#/upload"></ion-tab>
+        <ion-tab icon="ion-clipboard" title="List Tasks" href="#/list"></ion-tab>
+    </ion-tabs>
+</div>

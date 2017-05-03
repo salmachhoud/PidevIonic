@@ -1,0 +1,36 @@
+<ion-header-bar class="bar-royal">
+
+     <h2 class="title">Detail Task</h2>
+
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+  
+
+<ion-item> 
+   Name : {{TaskById.name}}
+    
+</ion-item>
+        <ion-item> 
+  Start-Date :  {{TaskById.startdate}}
+    
+</ion-item>
+<ion-item> 
+    End-Date : {{TaskById.enddate}}
+    
+</ion-item>
+<ion-item> 
+   Participants-Number : {{TaskById.numberofparticipants}}
+    
+</ion-item>
+</ion-list>
+</ion-content>
+
+<div class="tabs-striped tabs-color-royal">
+    <ion-tabs class="tabs-icon-top" >
+        
+        
+        <ion-tab icon="ion-arrow-down-c" title="Upload Image" href="#/upload"></ion-tab>
+        <ion-tab icon="ion-clipboard" title="List Tasks" href="#/list"></ion-tab>
+    </ion-tabs>
+</div>
